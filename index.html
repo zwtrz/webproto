@@ -1,13 +1,48 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>title v2?</title>
-  </head>
-  <body>
-    <h1>Hello from Netlify</h1>
-    <h1>hi again</h1>
-    <h2>Testing from VS Code</h2>
-  </body>
-</html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Two Sidebars</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="title">Demo Page</div>
+</header>
+
+
+<main class="content">
+  <h1 id="landingTitle" class="landing-title">Landing Page</h1>
+  <p>Sidebars will appear automatically after the title fades in.</p>
+</main>
+
+  <!-- overlay (click to close) -->
+  <div class="overlay" id="overlay" hidden></div>
+
+  <!-- LEFT sidebar -->
+  <aside class="sidebar sidebar--left" id="leftSidebar" aria-hidden="true">
+    <div class="sidebar__inner">
+      <div class="sidebar__header">
+        <h2>Left Sidebar</h2>
+        <button class="iconbtn" id="closeLeft" type="button" aria-label="Close left sidebar">✕</button>
+      </div>
+
+      <button class="placeholder" type="button">Placeholder Button (Left)</button>
+    </div>
+  </aside>
+
+  <!-- RIGHT sidebar -->
+  <aside class="sidebar sidebar--right" id="rightSidebar" aria-hidden="true">
+    <div class="sidebar__inner">
+      <div class="sidebar__header">
+        <h2>Right Sidebar</h2>
+        <button class="iconbtn" id="closeRight" type="button" aria-label="Close right sidebar">✕</button>
+      </div>
+
+      <button class="placeholder" type="button">Placeholder Button (Right)</button>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
